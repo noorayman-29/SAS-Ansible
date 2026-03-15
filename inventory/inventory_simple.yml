@@ -12,7 +12,7 @@ all:
   # All hosts together in this simple example
   hosts:
 
-     awx: 192.168.0.135
+    awx:
     #redhat-1:
     #redhat-2:
     #ubuntu-1:
