@@ -30,3 +30,22 @@
       ansible.builtin.command: cat local_unix_users_report.csv
       delegate_to: localhost
       run_once: true
+      
+
+    - name: Save report to AWX server
+      copy:
+        src: local_unix_users_report.csv
+        dest: /tmp/local_unix_users_report.csv
+      delegate_to: localhost
+      run_once: true
+
+
+    - name: Print report
+      ansible.builtin.shell: cat local_unix_users_report.csv
+      register: report_output
+      delegate_to: localhost
+      run_once: true
+    
+- debug:
+    var: report_output.stdout_lines
+
