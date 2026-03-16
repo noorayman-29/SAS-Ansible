@@ -24,13 +24,12 @@
   roles:
     - name: oneidentity.authentication_services.local_unix_users
 
-  tasks:
+ tasks:
 
     - name: Show report in AWX logs
       ansible.builtin.command: cat local_unix_users_report.csv
       delegate_to: localhost
       run_once: true
-      
 
     - name: Save report to AWX server
       copy:
@@ -39,13 +38,12 @@
       delegate_to: localhost
       run_once: true
 
-
     - name: Print report
       ansible.builtin.shell: cat local_unix_users_report.csv
       register: report_output
       delegate_to: localhost
       run_once: true
-    
-- debug:
-    var: report_output.stdout_lines
 
+    - name: Display report in AWX output
+      ansible.builtin.debug:
+        var: report_output.stdout_lines
