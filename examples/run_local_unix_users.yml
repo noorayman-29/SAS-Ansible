@@ -29,3 +29,9 @@
       ansible.builtin.command: cat local_unix_users_report.csv
       delegate_to: localhost
       run_once: true
+    
+    - name: Show CSV report in AWX job output
+      ansible.builtin.shell: cat {{ playbook_dir }}/local_unix_users_report.csv
+      delegate_to: 127.0.0.1
+      run_once: true
+
