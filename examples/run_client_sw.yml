@@ -6,7 +6,7 @@
   vars:
 
     # Directories
-    client_sw_dir: "files/client"
+    client_sw_dir: "/files/client"
     client_sw_tmp_dir: /tmp/1id
 
     # Software states
