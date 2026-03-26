@@ -16,7 +16,7 @@
     local_unix_users_reports_backup: true
 
     # Generate reports on the AWX execution side
-    local_unix_users_reports_host: 127.0.0.1
+    local_unix_users_reports_host: 192.168.0.138
 
     # Use absolute paths so the role knows exactly where to write
     local_unix_users_reports:
