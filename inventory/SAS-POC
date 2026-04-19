@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+
+    UB-Host-1:
+      ansible_host: 192.168.0.123
+
+    UB-Host-2:
+      ansible_host: 192.168.0.124
