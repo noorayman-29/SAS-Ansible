@@ -8,7 +8,7 @@
 
     # Active Directory
     client_join_state: joined
-    client_domain: du.com
+    client_domain: itg-internal.com
     client_username: administrator
     client_password: Admin123
     # client_keytab: /tmp/1id/admin.keytab
