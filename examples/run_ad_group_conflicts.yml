@@ -25,4 +25,4 @@
       dest: /home/reports/ad_user_conflicts_report.html
 
   roles:
-    - name: oneidentity.authentication_services.ad_group_conflicts
+    - name: oneidentity.authentication_services.ad_user_conflicts
