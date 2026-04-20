@@ -1,4 +1,4 @@
 ---
 collections:
   - name: oneidentity.authentication_services
-  - name: community.windows
+  - name: microsoft.ad
