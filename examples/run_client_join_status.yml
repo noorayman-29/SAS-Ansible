@@ -15,9 +15,9 @@
 
     client_join_reports: 
       - src:  client_agent_status_report.csv.j2   
-        dest: /tmp/client_agent_status_report.csv
+        dest: /home/reports/client_agent_status_report.csv
       - src:  client_agent_status_report.html.j2
-        dest: /tmp/client_agent_status_report.html
+        dest: /home/reports/client_agent_status_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_join_status
