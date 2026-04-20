@@ -1,0 +1,28 @@
+---
+
+- hosts: all
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Active Directory
+    client_domain: itg-internal.com
+    client_username: administrator
+    client_password: Admin123
+
+    # Report parameters
+    ad_group_conflicts_base_container: 'CN=Users,DC=itg-internal,DC=com'
+
+    # Reports
+    ad_group_conflicts_reports_generate: true
+    ad_group_conflicts_reports_backup: true
+    ad_user_conflicts_reports_host: 192.168.0.123
+    ad_user_conflicts_reports:
+    - src:  ad_user_conflicts_report.csv.j2
+      dest: /home/reports/ad_user_conflicts_report.csv
+    - src:  ad_user_conflicts_report.html.j2
+      dest: /home/reports/ad_user_conflicts_report.html
+
+  roles:
+    - name: oneidentity.authentication_services.ad_group_conflicts
