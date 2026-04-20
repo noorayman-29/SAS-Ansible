@@ -15,9 +15,9 @@
     host_access_control_reports_host: 192.168.0.123
     host_access_control_reports: 
     - src:  host_access_control_report.csv.j2
-      dest: host_access_control_report.csv
+      dest: /home/reports/host_access_control_report.csv
     - src:  host_access_control_report.html.j2
-      dest: host_access_control_report.html
+      dest: /home/reports/host_access_control_report.html
 
   roles:
     - name: oneidentity.authentication_services.host_access_control
