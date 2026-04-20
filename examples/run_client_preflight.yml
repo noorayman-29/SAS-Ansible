@@ -7,13 +7,17 @@
   vars:
 
     # Active Directory
-    client_domain: sample.net
-    client_username: user
-    client_password: pass
+    client_domain: itg-internal.com
+    client_username: administrator
+    client_password: Admin123
 
     # Directories
-    client_sw_dir: "./files/QAS-4.2.4.25529/client"
+    client_sw_dir: "client"
     client_sw_tmp_dir: /tmp/1id
+
+    client_preflight_checks: 5
+    client_preflight_timesync: false
+    client_preflight_extra_args: ''
 
     # Facts
     client_preflight_facts_generate: true
@@ -21,7 +25,13 @@
 
     # Reports
     client_preflight_reports_generate: true
-    client_preflight_reports_backup: false 
+    client_preflight_reports_backup: true
+    client_preflight_reports_host: 192.168.0.123
+    client_preflight_reports: 
+       - src:  client_preflight_report.csv.j2   
+         dest: client_preflight_report.csv
+       - src:  client_preflight_report.html.j2
+         dest: client_preflight_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_preflight
