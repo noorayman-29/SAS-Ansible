@@ -5,17 +5,18 @@
 
   # The variables you would most likely want/need to override have been included
   vars:
-
-    client_agent_status_reports_details_format: json
-
+    # Facts
+    client_agent_status_facts_generate: true
+    client_agent_status_facts_verbose: true
+    
     # Reports
-    client_agent_status_reports_host: 192.168.0.122
+    client_agent_status_reports_details_format: yaml
+    client_agent_status_reports_host: '192.168.0.123'    
     client_join_status_reports_generate: true
     client_join_status_reports_backup: true
-
     client_join_reports: 
       - src:  client_agent_status_report.csv.j2   
-        dest: /tmp/client_agent_status_report.csv
+        dest: /home/reports/client_agent_status_report.csv
       - src:  client_agent_status_report.html.j2
         dest: /tmp/client_agent_status_report.html
 
