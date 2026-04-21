@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Facts
+    local_unix_users_with_ad_logon_facts_generate: true
+
+    # Reports
+    local_unix_users_with_ad_logon_reports_generate: true
+    local_unix_users_with_ad_logon_reports_backup: true
+    local_unix_users_with_ad_logon_reports_host: 192.168.0.123
+    local_unix_users_with_ad_logon_reports:
+    - src:  local_unix_users_with_ad_logon_report.csv.j2
+      dest: /home/reports/local_unix_users_with_ad_logon_report.csv
+    - src:  local_unix_users_with_ad_logon_report.html.j2
+      dest: /home/reports/local_unix_users_with_ad_logon_report.html
+
+  roles:
+    - name: oneidentity.authentication_services.local_unix_users_with_ad_logon
