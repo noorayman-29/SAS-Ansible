@@ -26,12 +26,12 @@
     # Reports
     client_preflight_reports_generate: true
     client_preflight_reports_backup: true
-    client_preflight_reports_host: 192.168.0.122
+    client_preflight_reports_host: 192.168.0.123
     client_preflight_reports: 
        - src:  client_preflight_report.csv.j2   
-         dest: /tmp/client_preflight_report.csv
+         dest: /home/reports/client_preflight_report.csv
        - src:  client_preflight_report.html.j2
-         dest: /tmp/client_preflight_report.html
+         dest: /home/reports/client_preflight_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_preflight
