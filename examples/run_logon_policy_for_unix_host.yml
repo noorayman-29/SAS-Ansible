@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Facts
+    logon_policy_for_unix_host_facts_generate: true
+
+    # Reports
+    logon_policy_for_unix_host_reports_generate: true
+    logon_policy_for_unix_host_reports_backup: true
+    logon_policy_for_unix_host_reports_host: 192.168.0.123
+    logon_policy_for_unix_host_reports:
+    - src:  logon_policy_for_unix_host_report.csv.j2
+      dest: /home/reports/logon_policy_for_unix_host_report.csv
+    - src:  logon_policy_for_unix_host_report.html.j2
+      dest: /home/reports/logon_policy_for_unix_host_report.html
+
+  roles:
+    - name: oneidentity.authentication_services.logon_policy_for_unix_host
