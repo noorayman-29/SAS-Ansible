@@ -16,16 +16,16 @@
     local_unix_users_reports_backup: true
 
     # Generate reports on the AWX execution side
-    local_unix_users_reports_host: 192.168.0.10
+    local_unix_users_reports_host: 192.168.0.123
 
     # Use absolute paths so the role knows exactly where to write
     local_unix_users_reports:
       - src: local_unix_users_report.csv.j2
-        dest: C:\Users\Administrator.NOOR-DC\Documents\reports\local_unix_users_report.csv
-        #dest: /home/reports/local_unix_users_report.csv
+        #dest: C:\Users\Administrator.NOOR-DC\Documents\reports\local_unix_users_report.csv
+        dest: /home/reports/local_unix_users_report.csv
       - src: local_unix_users_report.html.j2
-        dest: C:\Users\Administrator.NOOR-DC\Documents\reports\local_unix_users_report.html
-        #dest: /home/reports/local_unix_users_report.html
+        #dest: C:\Users\Administrator.NOOR-DC\Documents\reports\local_unix_users_report.html
+        dest: /home/reports/local_unix_users_report.html
 
   roles:
     - name: oneidentity.authentication_services.local_unix_users
