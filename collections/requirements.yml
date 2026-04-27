@@ -3,4 +3,4 @@ collections:
   - name: oneidentity.authentication_services
   #- name: microsoft.ad
   - name: community.windows
-      version: ">3.0.0"
+    version: ">3.0.0"
