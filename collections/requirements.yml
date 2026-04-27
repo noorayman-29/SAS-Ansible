@@ -2,5 +2,5 @@
 collections:
   - name: oneidentity.authentication_services
   - name: community.windows
-    version: "<3.0.0"
-  - name: microsoft.ad
+    #version: "<3.0.0"
+  #- name: microsoft.ad
