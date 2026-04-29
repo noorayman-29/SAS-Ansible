@@ -13,7 +13,7 @@
     # Reports
     client_agent_status_reports_generate: true
     client_agent_status_reports_backup: true
-    client_agent_status_reports_host: 192.168.0.123
+    client_agent_status_reports_host: 192.168.0.124
     client_join_reports: 
     - src:  client_agent_status_report.csv.j2   
       dest: /home/reports/client_agent_status_report.csv
