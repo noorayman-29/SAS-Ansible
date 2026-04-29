@@ -6,8 +6,8 @@
   # The variables you would most likely want/need to override have been included
   vars:
     # Facts
-    client_agent_status_facts_generate: true
-    client_agent_status_facts_verbose: true
+    client_join_status_facts_generate: true
+    client_join_status_facts_verbose: true
     
     # Reports  
     client_join_status_reports_generate: true
