@@ -1,5 +1,5 @@
 ---
-- hosts: SAS-Unix-Hosts
+- hosts: UB-Host-1,UB-Host-2
   gather_facts: false
 
   vars:
