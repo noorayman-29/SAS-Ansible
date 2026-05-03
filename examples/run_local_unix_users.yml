@@ -1,5 +1,5 @@
 ---
-- hosts: UB-Host-1,UB-Host-2
+- hosts: managed_hosts
   gather_facts: false
 
   vars:
@@ -16,7 +16,7 @@
     local_unix_users_reports_backup: true
 
     # Generate reports on the AWX execution side
-    local_unix_users_reports_host: 192.168.0.128
+    local_unix_users_reports_host: awx-itg
 
     # Use absolute paths so the role knows exactly where to write
     local_unix_users_reports:
