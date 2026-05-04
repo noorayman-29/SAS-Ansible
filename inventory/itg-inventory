@@ -20,3 +20,12 @@ all:
         ubuntu-host-2:
         ubuntu-pas-pm:
         awx-itg:
+
+    managed_pas_hosts:
+      hosts:
+        ubuntu-host-1:
+        ubuntu-host-2:
+
+    pas_pm_server:
+      hosts:
+        ubuntu-pas-pm:
