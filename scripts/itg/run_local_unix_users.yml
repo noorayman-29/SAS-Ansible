@@ -1,0 +1,29 @@
+---
+- hosts: managed_sas_hosts
+  gather_facts: false
+
+  vars:
+    local_unix_users_user_name: ''
+    local_unix_users_uid_number: ''
+    local_unix_users_primary_gid_number: ''
+    local_unix_users_comment: ''
+    local_unix_users_home_directory: ''
+    local_unix_users_login_shell: ''
+
+    local_unix_users_facts_generate: true
+
+    local_unix_users_reports_generate: true
+    local_unix_users_reports_backup: true
+
+    # Generate reports on the AWX execution side
+    local_unix_users_reports_host: awx-itg
+
+    # Use absolute paths so the role knows exactly where to write
+    local_unix_users_reports:
+      - src: local_unix_users_report.csv.j2
+        dest: /home/reports/local_unix_users_report.csv
+      - src: local_unix_users_report.html.j2
+        dest: /home/reports/local_unix_users_report.html
+
+  roles:
+    - name: oneidentity.authentication_services.local_unix_users
