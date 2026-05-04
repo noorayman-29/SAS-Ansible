@@ -34,9 +34,9 @@
     client_sw_reports_host: awx-itg
     client_sw_reports: 
       - src:  client_sw_report.csv.j2   
-        dest: /home/reports/client_sw_report.csv
+        dest: /home/reports/sas/client_sw_report.csv
       - src:  client_sw_report.html.j2
-        dest: /home/reports/client_sw_report.html
+        dest: /home/reports/sas/client_sw_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_sw
