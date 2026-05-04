@@ -14,7 +14,9 @@ all:
      
 
   children:
-    managed_hosts:
+    managed_sas_hosts:
       hosts:
         ubuntu-host-1:
         ubuntu-host-2:
+        ubuntu-pas-pm:
+        awx-itg:
