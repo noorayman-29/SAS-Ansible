@@ -15,9 +15,9 @@
     client_join_status_reports_host: awx-itg
     client_join_status_reports: 
       - src:  client_join_status_report.csv.j2   
-        dest: /home/reports/client_join_status_report.csv
+        dest: /home/reports/sas/client_join_status_report.csv
       - src:  client_join_status_report.html.j2
-        dest: /home/reports/client_join_status_report.html
+        dest: /home/reports/sas/client_join_status_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_join_status
