@@ -1,0 +1,23 @@
+---
+
+- hosts: managed_sas_hosts
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Facts
+    host_access_control_facts_generate: true
+
+    # Reports
+    host_access_control_reports_generate: true
+    host_access_control_reports_backup: true
+    host_access_control_reports_host: awx-itg
+    host_access_control_reports: 
+    - src:  host_access_control_report.csv.j2
+      dest: /home/reports/sas/host_access_control_report.csv
+    - src:  host_access_control_report.html.j2
+      dest: /home/reports/sas/host_access_control_report.html
+
+  roles:
+    - name: oneidentity.authentication_services.host_access_control
