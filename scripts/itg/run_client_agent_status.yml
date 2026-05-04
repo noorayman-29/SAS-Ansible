@@ -1,0 +1,23 @@
+---
+
+- hosts: managed_sas_hosts
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Facts
+    client_agent_status_facts_generate: true
+    client_agent_status_facts_verbose: true
+
+     # Reports
+    client_agent_status_reports_generate: true
+    client_agent_status_reports_backup: true
+    client_agent_status_reports_host: awx-itg
+    client_agent_status_reports: 
+      - src:  client_agent_status_report.csv.j2   
+        dest: /home/reports/client_agent_status_report.csv
+      - src:  client_agent_status_report.html.j2
+        dest: /home/reports/client_agent_status_report.html
+  roles:
+    - name: oneidentity.authentication_services.client_agent_status
