@@ -21,9 +21,9 @@
     # Use absolute paths so the role knows exactly where to write
     local_unix_users_reports:
       - src: local_unix_users_report.csv.j2
-        dest: /home/reports/local_unix_users_report.csv
+        dest: /home/reports/sas/local_unix_users_report.csv
       - src: local_unix_users_report.html.j2
-        dest: /home/reports/local_unix_users_report.html
+        dest: /home/reports/sas/local_unix_users_report.html
 
   roles:
     - name: oneidentity.authentication_services.local_unix_users
