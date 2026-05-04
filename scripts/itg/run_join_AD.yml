@@ -1,0 +1,25 @@
+---
+
+- hosts: managed_sas_hosts
+  gather_facts: false
+
+  # The variables you would most likely want/need to override have been included
+  vars:
+
+    # Active Directory
+    client_join_state: joined
+    client_domain: itg-internal.com
+    client_username: administrator
+    client_password: Admin123
+    # client_keytab: /tmp/1id/admin.keytab
+
+    # Facts
+    client_join_facts_generate: true
+    client_join_facts_verbose: false
+
+    # Reports
+    client_join_reports_generate: true 
+    client_join_reports_backup: false 
+
+  roles:
+    - name: oneidentity.authentication_services.client_join
