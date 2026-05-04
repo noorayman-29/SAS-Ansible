@@ -18,9 +18,9 @@
     logon_policy_for_ad_user_reports_host: awx-itg
     logon_policy_for_ad_user_reports:
     - src:  logon_policy_for_ad_user_report.csv.j2
-      dest: /home/reports/logon_policy_for_ad_user_report.csv
+      dest: /home/reports/sas/logon_policy_for_ad_user_report.csv
     - src:  logon_policy_for_ad_user_report.html.j2
-      dest: /home/reports/logon_policy_for_ad_user_report.html
+      dest: /home/reports/sas/logon_policy_for_ad_user_report.html
 
   roles:
     - name: oneidentity.authentication_services.logon_policy_for_ad_user
