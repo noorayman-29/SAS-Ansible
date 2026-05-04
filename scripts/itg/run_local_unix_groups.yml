@@ -21,9 +21,9 @@
     local_unix_groups_reports_host: awx-itg
     local_unix_groups_reports:
      - src:  local_unix_groups_report.csv.j2
-       dest: /home/reports/local_unix_groups_report.csv
+       dest: /home/reports/sas/local_unix_groups_report.csv
      - src:  local_unix_groups_report.html.j2
-       dest: /home/reports/local_unix_groups_report.html
+       dest: /home/reports/sas/local_unix_groups_report.html
 
   roles:
     - name: oneidentity.authentication_services.local_unix_groups
