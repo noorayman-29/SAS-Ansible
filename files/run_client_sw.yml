@@ -1,6 +1,6 @@
 ---
 
-- hosts: all 
+- hosts: managed_sas_hosts
 
   # The variables you would most likely want/need to override have been included
   vars:
@@ -30,7 +30,13 @@
     
     # Reports
     client_sw_reports_generate: true 
-    client_sw_reports_backup: false 
+    client_sw_reports_backup: true
+    client_sw_reports_host: awx-itg
+    client_sw_reports: 
+      - src:  client_sw_report.csv.j2   
+        dest: /home/reports/client_sw_report.csv
+      - src:  client_sw_report.html.j2
+        dest: /home/reports/client_sw_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_sw
