@@ -19,7 +19,13 @@
 
     # Reports
     client_join_reports_generate: true 
-    client_join_reports_backup: false 
+    client_join_reports_backup: true
+    client_join_reports_generate: awx-itg
+    client_join_reports: 
+    - src:  client_join_report.csv.j2   
+      dest: /home/reports/sas/client_join_report.csv
+    - src:  client_join_report.html.j2
+      dest: /home/reports/sas/client_join_report.html
 
   roles:
     - name: oneidentity.authentication_services.client_join
